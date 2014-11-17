@@ -36,6 +36,6 @@ Licencia
 
 Arduino Web Panel by Andres Alonzo is licensed under a Creative Commons Reconocimiento 4.0 Internacional License. 
 
-###Yo soy tu padre
+###Edson, yo soy tu padre!
 ![Soy Tu Padre] (http://elchavalin.unacasaconvistas.com/imagenes/yosoytupadre02.jpg "Edson, Yo soy tu padre.")
 
