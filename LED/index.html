@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+    var socket = io.connect('http://localhost');
+    function ledOn() {
+        var ledID= document.getElementById('ledid').value
+        socket.emit('ledon', { led: ledID });
+    };
+    function ledoff() {
+        var ledID= document.getElementById('ledid').value
+        socket.emit('ledoff', { led: ledID });
+    };
+    function ledStrobe() {
+        var ledID = document.getElementById('ledid').value;
+        var delay = document.getElementById('ledDelay').value;
+        socket.emit('ledstrobe', { led: ledID, ledDelay:delay  });
+    };
+    
+    function ledStop()
+      {
+        var ledID= document.getElementById('ledid').value
+        socket.emit('ledstop', { led: ledID });
+      }
+  </script>
+</head>
+<body>
+<form class="form-horizontal" role="form">
+<fieldset>
+<legend>Arduino LED Control</legend>
+  <label class="control-label col-sm-2" for="ledid">PIN</label>
+  <div class="controls">
+    <select id="ledid" name="ledid" class="input-mini">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option selected="selected" >13</option>
+    </select>
+  </div>
+
+<div class="control-group">
+  <label class="control-label col-sm-2" for="ledon">On/OF</label>
+  <div class="controls">
+    <button type="button" id="ledon" name="ledon" class="btn-lg btn btn-success" onclick="ledOn();">ON</button>
+    <button type="button" id="ledof" name="ledof" class="btn-lg btn btn-danger" onclick="ledoff();">OFF</button>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label col-sm-2" for="ledDelay">Led #</label>
+  <div class="controls">
+    <input id="ledDelay" name="ledDelay" placeholder="Milisegundos" class="input-xlarge" type="number" value="100">
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label col-sm-2" for="ledon">On/OF</label>
+  <div class="controls">
+    <button  type="button" id="ledstrobe" name="ledstrobe" class="btn-lg btn btn-primary" onclick="ledStrobe();">Strobe</button>
+    <button  type="button" id="ledstop" name="ledstop" class="btn-lg btn btn-danger" onclick="ledStop();">Stop</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Arduino Web Panel</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://soyalonzo.com" property="cc:attributionName" rel="cc:attributionURL">Andres Alonzo</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Reconocimiento 4.0 Internacional License</a>.
+    
+</body>
+</html>
