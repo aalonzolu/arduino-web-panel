@@ -4,6 +4,8 @@
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
 <title> Arduino Led Panel</title>
   <script src="/socket.io/socket.io.js"></script>
   <script type="text/javascript">
@@ -30,12 +32,13 @@
   </script>
 </head>
 <body>
+<div class="col-sm-6 col-lg-4">
 <form class="form-horizontal" role="form">
 <fieldset>
 <legend>Arduino LED Control</legend>
-  <label class="control-label col-sm-2" for="ledid">PIN</label>
+  <label for="ledid">PIN</label>
   <div class="controls">
-    <select id="ledid" name="ledid" class="input-mini">
+    <select id="ledid" name="ledid" class="form-control">
       <option>0</option>
       <option>1</option>
       <option>2</option>
@@ -54,31 +57,32 @@
   </div>
 
 <div class="control-group">
-  <label class="control-label col-sm-2" for="ledon">On/OF</label>
+  <label for="ledon">On/OF</label>
   <div class="controls">
-    <button type="button" id="ledon" name="ledon" class="btn-lg btn btn-success" onclick="ledOn();">ON</button>
-    <button type="button" id="ledof" name="ledof" class="btn-lg btn btn-danger" onclick="ledoff();">OFF</button>
+    <button type="button" id="ledon" name="ledon" class="btn-lg btn btn-success form-control" onclick="ledOn();">ON</button>
+    <button type="button" id="ledof" name="ledof" class="btn-lg btn btn-danger form-control" onclick="ledoff();">OFF</button>
   </div>
 </div>
 
 <div class="control-group">
-  <label class="control-label col-sm-2" for="ledDelay">Led #</label>
+  <label for="ledDelay">Led #</label>
   <div class="controls">
-    <input id="ledDelay" name="ledDelay" placeholder="Milisegundos" class="input-xlarge" type="number" value="100">
+    <input id="ledDelay" name="ledDelay" placeholder="Milisegundos"  class="form-control" type="number" value="100">
   </div>
 </div>
 
 <div class="control-group">
-  <label class="control-label col-sm-2" for="ledon"></label>
+  <label for="ledon"></label>
   <div class="controls">
-    <button  type="button" id="ledstrobe" name="ledstrobe" class="btn-lg btn btn-primary" onclick="ledStrobe();">Strobe</button>
-    <button  type="button" id="ledstop" name="ledstop" class="btn-lg btn btn-danger" onclick="ledStop();">Stop</button>
+    <button  type="button" id="ledstrobe" name="ledstrobe" class="btn-lg btn btn-primary form-control" onclick="ledStrobe();">Strobe</button>
+    <button  type="button" id="ledstop" name="ledstop" class="btn-lg btn btn-danger form-control" onclick="ledStop();">Stop</button>
   </div>
 </div>
 
 </fieldset>
 </form>
-    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Arduino Web Panel</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://soyalonzo.com" property="cc:attributionName" rel="cc:attributionURL">Andres Alonzo</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Reconocimiento 4.0 Internacional License</a>.
+    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Arduino Web Panel</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://soyalonzo.com" property="cc:attributionName" rel="cc:attributionURL">Andres Alonzo</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Reconocimiento 4.0 Internacional License</a>
+    </div>
     
 </body>
 </html>
