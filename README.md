@@ -1,8 +1,8 @@
-![Alt text](/nodebotshuehue.ml/file/2014/11/10/nodebot_3.png?raw=true "Optional Title")
+![NodeBots](http://nodebotshuehue.ml/file/2014/11/10/nodebot_3.png "NodeBots Logo")
 # Arduino Web Panel
 Ejemplos de como controlar Arduino desde una página web con node.js, socket.io y johnny-five.
 ## Paneles
-### [Led Panel](https://github.com/andyalonzo/arduino-web-panel/tree/master/LED)
+### [LED Panel](https://github.com/andyalonzo/arduino-web-panel/tree/master/LED)
 
 ### Prerequisitos
 
