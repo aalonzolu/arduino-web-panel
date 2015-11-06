@@ -3,7 +3,7 @@
 # Arduino Web Panel
 Ejemplos de como controlar Arduino desde una página web con node.js, socket.io y johnny-five.
 ## Paneles
-### [LED Panel](https://github.com/andyalonzo/arduino-web-panel/tree/master/LED)
+* [LED Panel](https://github.com/andyalonzo/arduino-web-panel/tree/master/LED)
 
 ### Prerequisitos
 
